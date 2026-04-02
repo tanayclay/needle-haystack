@@ -65,6 +65,29 @@ export default function RecordCard({ page }: RecordCardProps) {
           </div>
         )}
 
+        {/* Second person card */}
+        {page.subject2 && (
+          <div className={`mx-6 mb-4 px-4 py-3 border ${accent.border} rounded-sm ${accent.bgFaint}`}>
+            <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 font-mono text-sm">
+              <span className="text-stone-500">Subject:</span>
+              <span className="text-[#f5f0e8]">{page.subject2}</span>
+              <span className="text-stone-500">Designation:</span>
+              <span className="text-[#f5f0e8]">{page.designation2}</span>
+              <span className="text-stone-500">Affiliation:</span>
+              <span className="text-[#f5f0e8]">{page.affiliation2}</span>
+              <span className="text-stone-500">Reference:</span>
+              <a
+                href={page.reference2}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${accent.text} hover:underline break-all`}
+              >
+                {page.reference2}
+              </a>
+            </div>
+          </div>
+        )}
+
         {/* Content */}
         <div className="px-6 pb-6">
           {page.content.split("\n\n").map((paragraph, i) => (

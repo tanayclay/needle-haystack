@@ -180,4 +180,10 @@ export const people: Person[] = [
     organization: "TileDB",
     linkedinUrl: "https://www.linkedin.com/in/yannis-asimakopoulos/",
   },
+  {
+    name: "Tanay Mishra",
+    title: "Clay Coach",
+    organization: "Clay Bootcamp",
+    linkedinUrl: "https://www.linkedin.com/in/tanay-mishra-ai-a.../",
+  },
 ];

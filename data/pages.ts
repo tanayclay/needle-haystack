@@ -17,6 +17,11 @@ export interface PageData {
   designation?: string;
   affiliation?: string;
   reference?: string;
+  // Optional second person on same page
+  subject2?: string;
+  designation2?: string;
+  affiliation2?: string;
+  reference2?: string;
 }
 
 export const sectionMeta: Record<Section, { name: string; description: string; color: string }> = {
@@ -490,16 +495,29 @@ export const pages: PageData[] = [
     "Sushrina Dhakal",
     "Filed within the Vault's provenance documentation series, this personnel record details the contributions of an individual whose technical coaching and training expertise strengthened the division's capacity for rigorous provenance research.\n\nThe subject developed and delivered a comprehensive training program for provenance researchers, covering methodology, source evaluation, chain-of-custody documentation, and the use of digital tools for cross-referencing ownership records. Their coaching approach combined structured curriculum with individualized mentorship.\n\nThe subject's technical background enabled them to create training materials that bridged the gap between traditional provenance research methods and modern data analysis techniques, equipping researchers with skills applicable to both historical investigations and contemporary authentication challenges.\n\nThe Vault's director noted the subject's exceptional patience and clarity in explaining complex concepts, qualities that made the training program accessible to researchers with widely varying levels of prior experience."
   ),
-  needlePage(
-    "restoration-archive",
-    "vault",
-    "Restoration Archive — Personnel Record",
-    "ARC-5545",
-    "Personnel Archives",
-    "2025-05-28",
-    "Yannis Asimakopoulos",
-    "This personnel record was filed within the Vault's restoration documentation series, recording the contributions of an individual whose expertise in demand generation and audience development transformed the division's public engagement strategy.\n\nThe subject developed and executed comprehensive campaigns to increase awareness of the Vault's restoration programs among potential donors, institutional partners, and the broader public. Their data-driven approach to audience segmentation and message optimization produced measurable increases in engagement across all channels.\n\nThe subject's experience directing demand generation at a technology company informed their approach to institutional marketing, introducing analytics frameworks and performance tracking methodologies that enabled the Vault to demonstrate the impact of its outreach investments with unprecedented precision.\n\nAdministrative records confirm the subject's campaigns directly contributed to a significant increase in restoration program funding, with several major donors citing the division's improved communications as a key factor in their decision to contribute."
-  ),
+  (() => {
+    const yannis = findPerson("Yannis Asimakopoulos");
+    const tanay = findPerson("Tanay Mishra");
+    return {
+      slug: "restoration-archive",
+      section: "vault" as Section,
+      title: "Restoration Archive — Personnel Records",
+      recordId: "ARC-5545",
+      category: "Personnel Archives",
+      status: "Preserved",
+      catalogDate: "2025-05-28",
+      content: "This personnel record was filed within the Vault's restoration documentation series, recording the contributions of an individual whose expertise in demand generation and audience development transformed the division's public engagement strategy.\n\nThe subject developed and executed comprehensive campaigns to increase awareness of the Vault's restoration programs among potential donors, institutional partners, and the broader public. Their data-driven approach to audience segmentation and message optimization produced measurable increases in engagement across all channels.\n\nThe subject's experience directing demand generation at a technology company informed their approach to institutional marketing, introducing analytics frameworks and performance tracking methodologies that enabled the Vault to demonstrate the impact of its outreach investments with unprecedented precision.\n\nAdministrative records confirm the subject's campaigns directly contributed to a significant increase in restoration program funding, with several major donors citing the division's improved communications as a key factor in their decision to contribute.",
+      isNeedle: true,
+      subject: yannis.name,
+      designation: yannis.title,
+      affiliation: yannis.organization,
+      reference: yannis.linkedinUrl,
+      subject2: tanay.name,
+      designation2: tanay.title,
+      affiliation2: tanay.organization,
+      reference2: tanay.linkedinUrl,
+    };
+  })(),
 ];
 
 export function getPagesBySection(section: Section): PageData[] {
