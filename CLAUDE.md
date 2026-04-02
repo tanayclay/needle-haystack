@@ -21,8 +21,8 @@ npx vercel       # Deploy to Vercel
 - `/map` — Site directory (lists all pages, does NOT reveal which are needles)
 - 5 section landings: `/library`, `/laboratory`, `/garden`, `/observatory`, `/vault`
 - 40 sub-pages across 5 sections (8 per section)
-  - **18 needles** — contain real student data (name, title, org, LinkedIn)
-  - **22 haystacks** — fake archival content
+  - **29 needles** — contain real student data (name, title, org, LinkedIn)
+  - **11 haystacks** — fake archival content
 
 ## Key Files
 ```
@@ -45,27 +45,38 @@ Every sub-page uses the same `RecordCard` component with identical visual layout
 
 Claude (or a student) must READ the page content to distinguish needles from haystacks.
 
-## Needle Assignments
+## Needle Assignments (Cohort 2 — 29 students)
 | Student | Route |
 |---------|-------|
-| Andre Domanski | `/library/manuscript-collection` |
-| Ansh Bindal | `/library/rare-editions` |
+| Andres Ramirez | `/library/ancient-scrolls` |
+| Anoop Manghat | `/library/forgotten-tales` |
+| Quan Alex Nguyen | `/library/manuscript-collection` |
+| Ana Paula Petter | `/library/rare-editions` |
 | Anna An8na B. | `/library/scribes-notes` |
+| Ariel Levin | `/library/translation-records` |
+| CJ Pospisil | `/laboratory/chemical-analysis` |
 | Patricia C. | `/laboratory/field-notes` |
+| Conor Camicia | `/laboratory/growth-experiments` |
 | Heather Melton | `/laboratory/microscopy-log` |
-| Dany Dalal | `/laboratory/synthesis-reports` |
-| Deepankar Dimri | `/garden/cultivation-diary` |
-| Dorothy Huynh | `/garden/greenhouse-records` |
-| Luckish Rangra | `/garden/pollination-study` |
-| Marina Ghilchik | `/garden/seed-catalog` |
-| Mark Lim | `/observatory/celestial-maps` |
-| Nathan Lippi | `/observatory/eclipse-records` |
-| Nilesh Patil | `/observatory/stellar-catalog` |
-| Prashant Mantri | `/vault/acquisition-log` |
+| Gabriel Feitosa | `/laboratory/specimen-catalog` |
+| Azam Ali | `/laboratory/synthesis-reports` |
+| Joe Hinderstein, MHCI | `/garden/botanical-index` |
+| Houria Adnan | `/garden/cultivation-diary` |
+| Ketan Awasthi | `/garden/floral-specimens` |
+| Jane Kot | `/garden/greenhouse-records` |
+| Jenni Graff | `/garden/pollination-study` |
+| Jessica Ashar | `/garden/seed-catalog` |
+| Mohammed Rahman, PMP, B.ENG | `/observatory/asteroid-tracking` |
+| Lakshmi Randall | `/observatory/celestial-maps` |
+| Omar Zaibak | `/observatory/deep-space-log` |
+| Madina Biryukov | `/observatory/eclipse-records` |
+| Sandra Uche | `/observatory/meteor-showers` |
+| Max Krisol mhae Rempillo Rempillo | `/observatory/stellar-catalog` |
+| Shaan J. | `/vault/acquisition-log` |
 | Ria O. | `/vault/classified-documents` |
-| Ana Sofia Grass Giraldo | `/vault/expedition-findings` |
-| Stephanie Holland | `/vault/provenance-records` |
-| Tanay Mishra | `/vault/restoration-archive` |
+| Shruti Suman | `/vault/expedition-findings` |
+| Sushrina Dhakal | `/vault/provenance-records` |
+| Yannis Asimakopoulos | `/vault/restoration-archive` |
 
 ## Visual Theme
 - Dark background (`#0a0a0f`) with warm paper-toned cards
